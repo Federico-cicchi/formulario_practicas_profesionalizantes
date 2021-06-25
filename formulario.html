@@ -1,26 +1,5 @@
-<?php
-                                          //CONFIGURACION DEL SERVIDOR.
-$mail = new PHPMailer; //configuracion del servidor.
-$mail->isSMTP(); //configuracion del servidor.
-$mail->Host='smpt.gmail.com'; //host del servidor.
-$mail->Port=587; //indicar puerto.
-$mail->SMTPAuth=true; //habilitar autenticacion para smtp.
-$mail->SMTPSecure='tls'; //protocolo de seguridad.
-$mail->Username='fede12345cicchi@gmail.com'; //cuenta que se encarga de la conexion del uso y envio del protocolo.
-$mail->Password='xbarcelona123x'; //contraseña del usuario.
 
-                                          //CONFIGURAR DESTINATARIO.
-$mail->setFrom($_POST['email'],$_POST['nombre']); //indicar desde donde se envia.
-$mail->addAddress('fede12345cicchi@gmail.com'); //a donde llega el proceso.
-$mail->addReplyto($_POST['email'],$_POST['nombre']); //a donde llega la respuesta (formulario).
-                                       
-                                          //CONFIGURAR MENSAJE.
-$mail->isHTML(true); //indicar que el mensaje es de estructura HTML.
-$mail->Subject='Enviado por '.$_POST['nombre']; //por quien es enviado el mensaje.
-$mail->Body='<h1 align=center>Nombre: '$_POST['nombre'].'<br>Email: '.$_POST['email'].'<br>'.'</h1>'; //cuerpo del mensaje.
-?>
-<!-------------------------------------------------------------------------------------------------------------->
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
